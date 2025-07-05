@@ -88,7 +88,7 @@ const Login = asyncHandler(async(req,res)=>{
     const Option= {
         httpOnly:true,
         secure:true,
-        SameSite= None
+        SameSite: None
     }
 
     return res.cookie('accessToken',accessToken,Option)
