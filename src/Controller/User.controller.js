@@ -85,11 +85,12 @@ const Login = asyncHandler(async(req,res)=>{
 
     const accessToken = await genrateAccessToken(user._id)
 
-    const Option= {
-        httpOnly:true,
-        secure:true,
-        SameSite:None
-    }
+   const Option = {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None"
+};
+
 
     return res.cookie('accessToken',accessToken,Option)
     .json(
